@@ -18,9 +18,6 @@ export class BookController {
 
   @Get(':author')
   async getBookCountByAuthor(@Param('author') author) {
-
-    // console.log(author);
-    // return author
     return await this.booksService.getBookCountByAuthor(author);
   }
 }
